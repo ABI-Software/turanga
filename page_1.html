@@ -1,0 +1,30 @@
+<h1>
+	My Interactive Lung
+</h1>
+<form style="display: table;">
+<div id="field1" style="display: table-row;">
+	<p style="display: table-cell;">Enter your age:</p>
+	<div style="display: table-cell;">
+		<button type="button" id="sub" class="sub" onclick="subClicked(this);">-</button>
+		<input type="text" id="age_input" value="0" class="field" />
+		<button type="button" id="add" class="add" onclick="addClicked(this);">+</button>
+	</div>
+</div>
+<div id="field2" style="display: table-row;">
+	<p>Enter your height:</p>
+	<div style="display: table-cell;">
+		<button type="button" id="sub2" class="sub" onclick="subClicked(this);">-</button>
+		<input type="text" id="height_input" value="0" class="field" />
+		<button type="button" id="add2" class="add" onclick="addClicked(this);">+</button>
+	</div>
+</div>
+<div style="display: table-row;">
+	<p>Female/Male:</p>
+	<div style="display: table-cell;">
+		<form action="" style="display: inline;">
+			<input id="female_radiobutton" type="radio" name="gender" value="female"> Female
+			<input id="male_radiobutton" type="radio" name="gender" value="male"> Male
+		</form>
+	</div>
+</div>
+</form>

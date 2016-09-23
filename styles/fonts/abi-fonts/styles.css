@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "lung-basic";
+  src:url("fonts/lung-basic.eot");
+  src:url("fonts/lung-basic.eot?#iefix") format("embedded-opentype"),
+    url("fonts/lung-basic.woff") format("woff"),
+    url("fonts/lung-basic.ttf") format("truetype"),
+    url("fonts/lung-basic.svg#lung-basic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "lung-basic" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "lung-basic" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-circle-check:before {
+  content: "\e000";
+}
+.icon-lung-outline:before {
+  content: "\e001";
+}
+.icon-rain:before {
+  content: "\e002";
+}

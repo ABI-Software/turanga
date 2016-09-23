@@ -1,0 +1,142 @@
+html, body, section {
+/*			width: 100%; */
+	height: 100%;
+	margin: 0;
+}
+
+header, footer, section,
+nav, article, aside {
+	border: 1px solid black;
+	padding: 0.25em;
+	margin: 0.25em;
+	border-radius: 0.25em;
+}
+
+.expand {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+/* items flex/expand vertically */
+.vbox {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/* items flex/expand horizontally */
+.hbox {
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+/*
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.flex-container > * {
+	padding: 10px;
+	flex: 1 100%;
+}
+*/
+/*
+.main {
+	text-align: left;
+	background: cornflowerblue;
+}
+*/
+/*
+.aside-content {
+	flex-grow: 1;
+}
+*/
+.fixend {
+	align-self: flex-end;
+}
+
+.main {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+article {
+	-webkit-flex: 3;
+	-moz-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+}
+aside, nav {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.flexgrow {
+	flex-grow: 1;
+}
+
+
+header {background: coral;}
+footer {background: lightgreen;}
+nav {background: pink;}
+aside {background: moccasin;}
+section {background: green;}
+article {background: purple;}
+.buttons {background: teal;}
+.view {background: orange;}
+
+input {
+    text-align: center;
+    width: 40px;
+    margin: 4px;
+    color: salmon;
+}
+
+/*		
+@media all and (min-width: 600px) {
+	aside { flex: 1 1 auto; }
+	nav { flex: 1 1 auto; }
+}
+*/
+@media all and (max-width: 800px) {
+	section {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	nav {order: 2;}
+	article {order: 1;}
+}
+
+@media all and (min-width: 800px) {
+	/* .main	 { flex: 3 3 0px; } */
+	section {
+		-webkit-flex-direction: row;
+		-moz-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	nav { flex: 1 1 0px;}
+	aside { flex: 1 1 0px;}
+	header {order: 0;}
+	nav {order: 1;}
+	aside { order: 2; }
+	article {order: 3;}
+/*			.main	 { order: 2; } */
+	section { order: 2; }
+	footer	 { order: 4; }
+}

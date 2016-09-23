@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en" style="height:100%">
 	<head>
 		<title>Lung Visualisations and Lung Age Estimation</title>
@@ -30,6 +30,10 @@
 			#info a, .button { color: #f00; font-weight: bold; text-decoration: underline; cursor: pointer }
 			.hoverPanel{ cursor: pointer }
 		</style>
+  		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+  		<link rel="stylesheet" type="text/css" href="styles/dat-gui-swec.css">
+		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   		<script>
 	    	var dojoConfig = {
@@ -50,10 +54,6 @@
     		
     	</script>
   		<script src="js/dat.gui.min.js"></script>
-  		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
-  		<link rel="stylesheet" type="text/css" href="styles/dat-gui-swec.css">
-		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="js/display_airways_flow.js"></script>
 		<script src="js/three.min.js"></script>
 		<script src="js/zinc_threejs_control.js"></script>
@@ -77,14 +77,6 @@
             	version    : 'v2.6'
             });
         };
-		
-		(function(d, s, id) {
-  			var js, fjs = d.getElementsByTagName(s)[0];
-  			if (d.getElementById(id)) return;
-  			js = d.createElement(s); js.id = id;
-  			js.src = "//connect.facebook.net/en_US/sdk.js";
-  			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
 		
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 		
@@ -418,7 +410,7 @@
         		});
       		});
 			
-			var cellUniforms= THREE.UniformsUtils.merge( [
+			var cellUniforms = THREE.UniformsUtils.merge( [
 				{
 					"ambient"  : { type: "c", value: new THREE.Color( 0xffffff ) },
 					"emissive" : { type: "c", value: new THREE.Color( 0x000000 ) },
@@ -436,7 +428,7 @@
 				}
 			] );
 			
-			var flowUniforms= THREE.UniformsUtils.merge( [
+			var flowUniforms = THREE.UniformsUtils.merge( [
 			{
 				"ambient"  : { type: "c", value: new THREE.Color( 0xffffff ) },
 				"emissive" : { type: "c", value: new THREE.Color( 0x000000 ) },
@@ -810,7 +802,7 @@
 					zincRenderer.addPreRenderCallbackFunction(updateUniforms(zincRenderer, cellUniforms, flowUniforms));
 					lungsScene = zincRenderer.createScene("Lungs");
 					loadExternalFiles(['shaders/clean_cell.vs', 'shaders/clean_cell.fs'], function (shaderText) {
-						lungsScene.loadFromViewURL('lung_2/lung2', lungsMeshReady(shaderText));
+						lungsScene.loadFromViewURL('surface/surface', lungsMeshReady(shaderText));
 					}, function (url) {
 					    alert('Failed to download "' + url + '"');
 					});

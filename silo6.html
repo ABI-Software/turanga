@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+	<head>
+		<title>MedTech CORE - Lung Simulation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:url"			  content="http://sites.bioeng.auckland.ac.nz/silo6_lung/" />
+		<meta property="og:type"		  content="website" />
+		<meta property="og:title"		  content="Personalised Lung Estimation and Visualisation." />
+		<meta property="og:description"	  content="Using parameters from an individual estimate the state of the lung and provide a 3D visualisation representative of the individual." />
+		<meta property="og:image"		  content="images/lungapp.jpg" />
+		<link rel="stylesheet" type="text/css" href="styles/common.css">
+		<link rel="stylesheet" type="text/css" href="styles/buttons.css">
+		<link rel="stylesheet" type="text/css" href="styles/overlay.css">
+	</head>
+	<body class="expand vbox viewport">
+		<section class="expand">
+			<nav class="expand vbox">
+				<div class="navcontent flexgrow">
+					<div id="navcontent_page_0" class="toggleByPageNumber page_0"></div>
+					<div id="navcontent_page_1" class="toggleByPageNumber page_1"></div>
+					<!-- 
+					<div w3-include-html="page_0.html" class="toggleByPageNumber page_0"></div>
+					<div w3-include-html="page_1.html" class="toggleByPageNumber page_1"></div>
+						-->
+				</div>
+				<div class="logos fixend">
+					<a href="http://www.abi.auckland.ac.nz/en.html">
+						<img src="images/abi-hc-rgb.png" style="width:50%">
+					</a>
+					<a href="http://www.turanga.org.nz/">
+						<img src="images/turanga_banner_0_transparent.png" style="width:25%;">
+					</a>
+					<div onclick="setPage(0);" style="display: inline;">
+						<img src="styles/images/start_again.png" style="width: 20%;">
+					</div>
+				</div>
+			</nav>
+			<article class="expand vbox">
+
+				<div id="zinc_rendered_view" class="view flexgrow" style="position: relative;">
+					<div id="loadingOverlay" class="loadingOverlay pageOverlay" style="top: 0;left: 0;position: absolute;">
+						<!--
+						<div id="loadingMessage" class="loadingMessage">Please wait, while the 3D models are being loaded...</div>
+						<div id="progressMessage" class="downloadMessage">Initialising Lungs...</div>
+						<div id="continueMessage" class="downloadMessage button" style="display:None">Click here to continue.</div>
+						-->
+					</div>
+					<div id="reset_button" style="top: 0;left: 0;position: absolute;" onclick="resetViewButtonClicked();">
+						<img src="styles/images/reset_button.png" style="width: 5%;">
+					</div>
+					<div style="text-align: center; display: none;">
+						<h3 id="renderer_Age" >
+							Simulated Age: 0
+						</h3>
+					</div>
+				</div>
+
+				<div class="buttons expand">
+					<div class="cool_btn1 cool_btn_rd green" onclick="modelButtonClicked('Surface');">
+						<h1 class='top'>View <i>Lung</i></h1>
+						<h2>&#xe001</h2>
+					</div>
+					<div class="cool_btn1 cool_btn_rd teal" onclick="modelButtonClicked('Airways');">
+						<h1 class='top'>View <i>Airways</i></h1>
+						<h2>&#xe000</h2>
+					</div>
+					<!--
+					<div class="cool_btn1 cool_btn_rd blue" onclick="modelButtonClicked('Vessels');">
+						<h1 class='top'>View <i>Blood Vessels</i></h1>
+						<h2>&#xe002</h2>
+					</div>
+						-->
+					<div class="flexgrow">
+						<!-- spacer div -->
+					</div>
+					<div class="cool_btn1 cool_btn_next orange fixend toggleByPageNumber page_0" onclick="interactiveLungButtonClicked();">
+						<h1 class='top'>Start <i>interactive lung</i></h1>
+						<h2>I</h2>
+					</div>
+				</div>
+			</article>
+		</section>
+		<script src="js/three.min.js"></script>
+		<script src="js/zinc_threejs_control.js"></script>
+		<script src="js/zinc_3js_renderer.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="http://www.w3schools.com/lib/w3data.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: 1, parseOnLoad: true" ></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script src="js/overlay.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			w3IncludeHTML();
+			setPage(0);
+			initZinc();
+			// Call in a fake button click to initialise view.
+			modelButtonClicked("Surface");
+		</script>
+	</body>
+</html>
