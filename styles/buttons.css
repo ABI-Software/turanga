@@ -1,0 +1,233 @@
+
+.Button {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.ConditionButtonsPosition {
+	bottom: 5%;
+	width: 35%;
+	left: 30%;
+}
+
+.GreyTitle h1 {
+	color: grey;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.GreyTitle h1 i {
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	font-family: titillium;
+}
+
+.PinkIcon {
+	background-image: url("images/lung_pink.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.YellowIcon {
+	background-image: url("images/lung_yellow.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.GreenIcon {
+	background-image: url("images/lung_green.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.InactiveIcon {
+	background-image: url("images/lung_inactive.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.AsthmaIcon {
+	background-image: url("images/lung_asthma.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.BreathingIcon {
+	background-image: url("images/lung_breathing.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.SmokingIcon {
+	background-image: url("images/lung_smoking.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.QuestionIcon {
+	background-image: url("images/lung_question.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.SpinIcon {
+	background-image: url("images/medtech_spin.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.ClickButton {
+	background-image: url("images/medtech_click.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.DoubleArmSpacer3 {
+	flex: 0 1 3vmin;
+}
+
+.DoubleArmSpacer8 {
+	flex: 0 1 8vmin;
+}
+
+.DoubleArmLocation {
+	position: relative;
+	width: 35%;
+	height: 100%;
+}
+
+.DoubleArmYellow {
+	background-image: url("images/lung_double_arm_yellow.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.PlusYellow {
+	background-image: url("images/lung_plus_yellow.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MinusYellow {
+	background-image: url("images/lung_minus_yellow.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.DoubleArmGreen {
+	background-image: url("images/lung_double_arm_green.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.PlusGreen {
+	background-image: url("images/lung_plus_green.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MinusGreen {
+	background-image: url("images/lung_minus_green.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.DoubleArmBlue {
+	background-image: url("images/lung_double_arm_blue.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.PlusBlue {
+	background-image: url("images/lung_plus_blue.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MinusBlue {
+	background-image: url("images/lung_minus_blue.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.DoubleArmWide {
+	background-image: url("images/lung_double_arm_wide.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 37%;
+	height: 100%;
+}
+
+.PlayButton {
+	background-image: url("images/lung_play.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.PauseButton {
+	background-image: url("images/lung_pause.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.ResetPlayButton {
+	background-image: url("images/lung_reset_play.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MaleIcon {
+	background-image: url("images/lung_male.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.FemaleIcon {
+	background-image: url("images/lung_female.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.TopArm {
+	position: absolute;
+	top: 3%;
+	left: 32.35%;
+	width: 36%;
+	height: 19%;
+}
+
+.BottomArm {
+	position: absolute;
+	top: 78%;
+	left: 32.35%;
+	width: 36%;
+	height: 19%;
+}
+
+.ValueDisplay {
+	position: relative;
+	top: 42%;
+	left: 18.5%;
+	width: 63%;
+	height: 23%;
+	text-align: center;
+	font-size: 2.5vmin;
+	font-weight: bold;
+}
+
+.ValueWideDisplay {
+	position: relative;
+	top: 45%;
+	left: 24.5%;
+	width: 50%;
+	height: 23%;
+	text-align: center;
+}
+
+.ResetViewButton {
+	background-image:url(./images/reset_view_button.png);
+	background-repeat:no-repeat;
+}
+

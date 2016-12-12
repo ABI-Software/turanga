@@ -1,0 +1,46 @@
+<div id="control_panel" class="Expand HBox">
+	<div style="width: 50%;">
+	<div id="age_input" class="Expand HBox JustifyContentEnd" style="color: #4A4A5B;">
+		<div class="VerticalAlignMiddle TextAlignRight InlineBlock AlignSelfCenter Margin1VMin"><p>Age</p></div>
+		<div class="DoubleArmLocation DoubleArmYellow VerticalAlignMiddle InlineBlock" style="height: 18vmin;">
+			<div class="PlusYellow TopArm Button" onclick="addClicked(this);"></div>
+			<div class="MinusYellow BottomArm Button" onclick="subClicked(this);"></div>
+			<div class="ValueDisplay"></div>
+		</div>
+	</div>
+	<div id="height_input" class="Expand HBox JustifyContentEnd" style="color: #4A4A5B;">
+		<div class="VerticalAlignMiddle TextAlignRight InlineBlock AlignSelfCenter Margin1VMin"><p>Height</p></div>
+		<div class="DoubleArmLocation DoubleArmGreen VerticalAlignMiddle InlineBlock" style="height: 18vmin;">
+			<div class="PlusGreen TopArm Button" onclick="addClicked(this);"></div>
+			<div class="MinusGreen BottomArm Button" onclick="subClicked(this);"></div>
+			<div class="ValueDisplay"></div>
+		</div>
+	</div>
+</div><!-- 
+--><div style="width: 50%;">
+	<div id="gender_input" class="Expand HBox" style="color: #4A4A5B;">
+		<div class="DoubleArmLocation DoubleArmBlue VerticalAlignMiddle InlineBlock" style="height: 18vmin;">
+			<div class="MaleIcon BottomArm Button" onclick="maleClicked(this);"></div>
+			<div class="FemaleIcon TopArm Button" onclick="femaleClicked(this);"></div>
+			<div class="ValueDisplay"></div>
+		</div>
+		<div class="VerticalAlignMiddle TextAlignRight InlineBlock AlignSelfCenter Margin1VMin"><p>Gender</p></div>
+	</div>
+	<div id="fev_input" class="Expand HBox" style="color: #4A4A5B;">
+		<div class="DoubleArmLocation DoubleArmBlue VerticalAlignMiddle InlineBlock" style="height: 18vmin;">
+			<div class="PlusBlue TopArm Button" incrementsize="0.1" precision="1" onclick="addClicked(this);"></div>
+			<div class="MinusBlue BottomArm Button" incrementsize="0.1" precision="1" onclick="subClicked(this);"></div>
+			<div class="ValueDisplay"></div>
+		</div>
+		<div class="VerticalAlignMiddle TextAlignRight InlineBlock AlignSelfCenter Margin1VMin"><p>FEV1</p></div>
+	</div>
+</div>
+</div>
+<div id="fev1_plot"></div>
+<div>
+<ul>
+<li>The <font color="blue">Blue</font> line is the population average non-smoking person</li>
+<li>The <font color="green">Green</font> line is you if you never smoked</li>
+<li>The <font color="red">Red</font> line is you if you started smoking at 25</li>
+</ul>
+</div>

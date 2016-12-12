@@ -1,0 +1,265 @@
+body {
+	pointer-events: auto;
+	background-color: black;
+	color: white;
+	font-family: moon, titillium;
+}
+
+html, body {
+/*	width: 100%; */
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+h1 {
+	font-family: moon;
+	font-size: 7vmin;
+	color: #00FBE8;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 3.5vmin;
+	color: #00FBE8;
+	margin-top: 0;
+}
+
+p, ul, span {
+	font-family: titillium;
+	font-size: 2.7vmin;
+}
+
+#left_page2, p {
+	font-size: 2.5vmin;
+}
+
+header, footer, section,
+nav, article, aside {
+/*	border: 1px solid black;*/
+	padding: 0.0em;
+	margin: 0.0em;
+/*	border-radius: 0.25em;*/
+}
+
+.IgnoreMouse {
+	pointer-events: none;
+}
+
+.Link {
+	pointer-events: all;
+}
+
+.HeightDynamicPVPlot {
+	height: 40vmin;
+}
+
+.HeightBreathingPlot {
+	height: 20%;
+}
+
+.WidthLungCondition {
+	width: 32%;
+}
+
+.WidthLeftColumn {
+	width: 30%;
+}
+
+.WidthRightColumn {
+	width: 30%;
+}
+
+.WidthCentreColumn {
+	width: 40%;
+}
+
+.WidthLogos {
+	width: 20%;
+}
+
+.Width50 {
+	width: 50%;
+}
+
+.VMin13 {
+	width: 13vmin;
+	height: 13vmin;
+}
+
+.VMin16 {
+	width: 16vmin;
+	height: 16vmin;
+}
+
+.VMin18Height {
+	height: 18vmin;
+}
+
+.VMin16Height {
+	height: 16vmin;
+}
+
+.Margin1VMin {
+	margin: 1vmin;
+}
+.WhiteBackground {
+	background-color: white;
+}
+
+.NearBottom {
+	bottom: 3%;
+}
+
+.FlexAlignCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.TextAlignCenter {
+	text-align: center;
+}
+
+.FixBottom {
+	bottom: 0px;
+}
+
+.FixRight {
+	right: 0px;
+}
+
+.PositionAbsolute {
+	position: absolute;
+}
+
+.PointerCursor {
+	cursor: pointer;
+}
+
+.AlmostFullSize {
+	width: 99%;
+	height: 99%;
+}
+
+.FullSize {
+	width: 100%;
+	height: 100%;
+}
+
+.Level3 {
+	z-index: 3;
+}
+
+.Level1 {
+	z-index: 1;
+}
+
+.CentreText {
+	text-align: center;
+}
+
+.TextAlignRight {
+	text-align: right;
+}
+
+.JustifyContentCenter {
+	justify-content: center;
+}
+
+.JustifySpaceBetween {
+	justify-content: space-between;
+}
+
+.JustifyContentEnd {
+	justify-content: flex-end;
+}
+
+.InlineBlock {
+	display: inline-block;
+}
+
+.VerticalAlignMiddle {
+	vertical-align: middle;
+}
+
+.AlignSelfCenter {
+	align-self: center;
+}
+
+.Expand {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+/* items flex/expand vertically */
+.VBox {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/* items flex/expand horizontally */
+.HBox {
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.FixEnd {
+	align-self: flex-end;
+}
+
+.Flex3 {
+	-webkit-flex: 3;
+	-moz-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+}
+
+.Flex1 {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.FlexGrow {
+	flex-grow: 1;
+}
+
+@media all and (max-width: 800px) {
+	section {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	nav {order: 2;}
+	article {order: 1;}
+}
+
+@media all and (min-width: 800px) {
+	/* .main	 { flex: 3 3 0px; } */
+	section {
+		-webkit-flex-direction: row;
+		-moz-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	nav { flex: 1 1 0px;}
+	aside { flex: 1 1 0px;}
+	header {order: 0;}
+	nav {order: 1;}
+	aside { order: 2; }
+	article {order: 3;}
+/*			.main	 { order: 2; } */
+	section { order: 2; }
+	footer	 { order: 4; }
+}

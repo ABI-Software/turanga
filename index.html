@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+	<head>
+		<title>MedTech CORE - Lung Simulation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:url"			  content="http://sites.bioeng.auckland.ac.nz/medtech/lung/" />
+		<meta property="og:type"		  content="website" />
+		<meta property="og:title"		  content="Personalised Lung Estimation and Visualisation." />
+		<meta property="og:description"	  content="Using parameters from an individual estimate the state of the lung and provide a 3D visualisation representative of the individual." />
+		<meta property="og:image"		  content="images/lungapp.jpg" />
+		<link rel="stylesheet" type="text/css" href="styles/common.css">
+		<link rel="stylesheet" type="text/css" href="styles/buttons.css">
+		<link rel="stylesheet" type="text/css" href="styles/overlay.css">
+		<link rel="stylesheet" type="text/css" href="styles/fonts.css">
+		<script>
+			var dojoConfig = {
+				async: true,
+				// This code registers the correct location of the "demo" package
+				// so we can load Dojo from the CDN whilst still being able to
+				// load local modules
+				packages: [{
+					name: "js",
+					location: location.pathname.replace(/\/[^/]+$/, '')  + '/js'
+				}]
+			};
+		</script>
+	</head>
+	<body style="position: relative;">
+		<div id="loadingOverlay" class="loadingOverlay pageOverlay Expand JustifyContentCenter" style="opacity: 0;">
+			<div id="loadingMessage" class="AlignSelfCenter"></div>
+		</div>
+		<div id="zinc_window" class="FullSize Level1 PositionAbsolute">
+		</div>
+			<div id="screen_saver">
+				<div id="clickButton" class="toggleByPageNumber page_0 Level3 GreyTitle NearBottom PositionAbsolute VMin16Height" onclick="startAgain();">
+					<img src="styles/images/medtech_click.svg" style="height: 100%;">
+					<h1 class="InlineBlock">Click here <i>For more info</i></h1>
+				</div>
+				<div id="spinIcon" class="toggleByPageNumber page_0 Level3 GreyTitle NearBottom PositionAbsolute FixRight VMin16Height">
+					<img src="styles/images/medtech_spin.svg" style="height: 100%;">
+					<h1 class="InlineBlock">Spin & zoom <i>To take a closer look</i></h1>
+				</div>
+				<div id="qr_code" class="toggleByPageNumber page_0 Level3 VMin18Height PositionAbsolute">
+					<img src="images/MedTech_CoRE_Lungs.png" style="height: 100%;">
+				</div>
+			</div>
+			<div class="Expand HBox IgnoreMouse">
+			<section id="left_section" class="Expand VBox WidthLeftColumn Level3 Margin1VMin">
+				<div id="left_page_1" class="toggleByPageNumber page_1"></div>
+				<div id="left_page_2" class="toggleByPageNumber page_2"></div>
+				<div id="left_page_3" class="toggleByPageNumber page_3"></div>
+				<div id="left_page_4" class="toggleByPageNumber page_4"></div>
+				<div id="left_page_5" class="toggleByPageNumber page_5"></div>
+				<div id="left_page_6" class="toggleByPageNumber page_6"></div>
+				<div id="left_page_7" class="toggleByPageNumber page_7"></div>
+				<div id="left_page_8" class="toggleByPageNumber page_8"></div>
+			</section>
+			<section id="main_section" class="WidthCentreColumn Level3 IgnoreMouse">
+			</section>
+			<section id="right_section" class="WidthRightColumn Level3 Margin1VMin">
+				<div id="right_page_1" class="toggleByPageNumber page_1"></div>
+				<div id="right_page_2" class="toggleByPageNumber page_2"></div>
+				<div id="right_page_3" class="toggleByPageNumber page_3"></div>
+				<div id="right_page_6" class="toggleByPageNumber page_6"></div>
+				<div id="right_page_8" class="toggleByPageNumber page_8"></div>
+			</section>
+			<div class="PositionAbsolute WidthLogos FixBottom WhiteBackground Level3 toggleByPageNumber page_natural">
+				<img src="images/turanga_banner_0_transparent.png" onclick="window.open('http://www.turanga.org.nz/')" class="Link Width50"><!--
+				--><img src="images/MedTech CoRE Logo.png" onclick="window.open('http://www.abi.auckland.ac.nz/en.html')" class="Link Width50">
+			</div>
+		</div>
+		<script src="js/three.min.js"></script>
+		<script src="js/zinc_threejs_control.js"></script>
+		<script src="js/zinc_3js_renderer.js"></script>
+		<script src="js/data_generator.js"></script>
+		<script src="js/display_airways_flow.js"></script>
+		<script src="js/Detector.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: 1, parseOnLoad: true" ></script> -->
+		<script src="js/dojo/1.10.6/dojo/dojo.js"></script>
+		<script src="js/globals.js"></script>
+		<script src="js/load.js"></script>
+		<script src="js/overlay.js"></script>
+		<script src="js/charts.js"></script>
+		<script src="js/buttons.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

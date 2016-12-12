@@ -129,7 +129,9 @@ right:400px
 }
 
 .sidebar-right.sidebar-closed>.sidebar-dock-button{
-right:0;background-image:url(./images/left_arrow.png)}
+right:0;
+background-image:url(./images/left_arrow.png)
+}
 
 #chartContainer {
     width: 100%;

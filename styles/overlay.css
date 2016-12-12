@@ -1,0 +1,18 @@
+.pageOverlay {
+	top: 30%;
+	left: 30%;
+	position: absolute;
+	height: 12%;
+	width: 40%;
+	z-index: 1001;
+}
+
+#loadingOverlay {
+	background:  #fff url('//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/images/loadingAnimation.gif') no-repeat 10px 23px;
+	color: black;
+}
+
+.loadingMessage {
+	padding: 25px 40px;
+	color: #999;
+}

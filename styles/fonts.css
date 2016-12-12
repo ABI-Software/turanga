@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "moon";
+	src: url("fonts/MoonTypeface/MoonBold.otf") format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "moon";
+	src: url("fonts/MoonTypeface/MoonLight.otf");
+}
+
+@font-face {
+	font-family: "titillium";
+	src: url("fonts/Titillium/Titillium-Bold.otf") format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "titillium";
+	src: url("fonts/Titillium/Titillium-Regular.otf") format("opentype");
+}
+

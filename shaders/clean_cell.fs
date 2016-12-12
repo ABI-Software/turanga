@@ -181,6 +181,7 @@ uniform	vec3 directionalLightDirection;
 uniform float time;
 uniform float severity;
 uniform float starting_time;
+uniform float surfaceAlpha;
 
 float rand(vec2 co){
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
@@ -268,6 +269,6 @@ vec3 totalSpecular = vec3( 0.0 );
  	gl_FragColor.xyz = gl_FragColor.xyz * rgb_scale;
  	if (gl_FragColor.y > gl_FragColor.x)
  		gl_FragColor.x = gl_FragColor.y;
- 	
+ 	gl_FragColor.a = surfaceAlpha;
 //	gl_FragColor.xyz = vec3(threshold, threshold, threshold);
 }

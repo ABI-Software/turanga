@@ -187,7 +187,7 @@ define([
 					hMinorLines: false,
 					vMajorLines: false,
 					vMinorLines: false,
-					majorHLine: { color: "green", width: 1 },
+					majorHLine: { color: "green", width: 5 },
 					majorVLine: { color: "red", width: 1 } });
                 
                 this.chartList[dom.id] = mychart;
